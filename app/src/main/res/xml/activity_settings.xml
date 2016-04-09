@@ -1,0 +1,50 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/settings_general">
+
+        <EditTextPreference
+            android:key="trigger"
+            android:title="@string/settings_trigger"
+            android:dialogTitle="@string/settings_trigger"
+            android:dialogMessage="@string/settings_trigger_message"
+            android:defaultValue="@string/default_trigger" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/settings_vibration">
+
+        <SwitchPreference
+            android:key="vibrate_permission"
+            android:title="@string/settings_vibrate_permission"
+            android:checked="true" />
+
+        <EditTextPreference
+            android:key="vibrate_on"
+            android:title="@string/settings_vibration_on_title"
+            android:dialogTitle="@string/settings_vibration_on_title"
+            android:dialogMessage="@string/settings_vibration_off_message" />
+
+        <EditTextPreference
+            android:key="vibrate_off"
+            android:title="@string/settings_vibration_off_title"
+            android:dialogTitle="@string/settings_vibration_off_title"
+            android:dialogMessage="@string/settings_vibration_off_message" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/settings_sound">
+
+        <ListPreference
+            android:key="alert_sound"
+            android:title="@string/settings_sound"
+            android:entries="@array/alert_sound"
+            android:entryValues="@array/alert_sound_value"
+            android:defaultValue="@string/alert_sound_value_default" />
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

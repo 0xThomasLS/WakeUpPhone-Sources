@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="next_btn">Suivant</string>
+    <string name="app_description">Cette application vous permet de retrouver votre téléphone même si vous l\'aviez laissé sur vibreur</string>
+    <string name="app_smspermission">Pour fonctionner WakeUpPhone a besoin de lire vos SMS afin de détecter le SMS d\'alerte pour le réveiller</string>
+    <string name="app_vibratepermission">WakeUpPhone a besoin de pouvoir déclencher le mode vibreur de votre téléphone</string>
+    <string name="app_ready">Vous pouvez perdre votre téléphone...</string>
+    <string name="app_wakeup">Cliquez sur l\'image pour arrêter l\'alerte</string>
+
+    <string name="settings_general">Général</string>
+    <string name="settings_trigger">Déclencheur</string>
+    <string name="settings_trigger_message">Mot, Phrase... reçu déclenchant l\'alerte</string>
+    <string name="settings_vibration_on_title">Mode activé</string>
+    <string name="settings_vibration_off_title">Mode désactivé</string>
+    <string name="settings_vibration_on_message">Durée (en millisecondes) durant laquelle la vibration est active</string>
+    <string name="settings_vibration_off_message">Durée (en millisecondes) durant laquelle la vibration est désactivée</string>
+    <string name="settings_sound">Son</string>
+
+    <string name="permission_refused_sms_message">En refusant cette permission à WakeUpPhone, l\'application ne pourra réveiller votre téléphone via un SMS d\'alerte</string>
+    <string name="permission_refused_vibrate_message">En refusant cette permission à WakeUpPhone, l\'application ne pourra faire vibrer votre téléphone</string>
+    <string name="permission_refused_confirmed_button">Je refuse la permission</string>
+    <string name="permission_refused_granted_button">J\'accepte la permission</string>
+
+    <string name="alert_sound_default">Sonnerie du téléphone</string>
+    <string name="permission_refused_title">Attention</string>
+    <string name="title_activity_settings">Réglages</string>
+    <string name="settings_vibrate_permission">Utilisation du vibreur</string>
+
+</resources>

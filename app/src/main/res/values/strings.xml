@@ -1,0 +1,40 @@
+<resources>
+    <string name="default_trigger" translatable="false">WakeUpPhone</string>
+
+    <string name="logo_description" translatable="false">Logo WakeUpPhone</string>
+    <string name="next_btn">Next</string>
+    <string name="app_description">This app can help you to find your phone although your phone is on vibrate mode</string>
+    <string name="app_smspermission">WakeUpPhone needs to read your text message for detecting your Alert message</string>
+    <string name="app_vibratepermission">WakeUpPhone needs to activate vibration mode on your phone</string>
+    <string name="app_ready">You can lost your phone...</string>
+    <string name="app_wakeup">Click the image to stop alarm</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <string name="settings_trigger">Trigger</string>
+    <string name="settings_trigger_message">Word, Phrase.. received triggering the Alert</string>
+    <string name="settings_sms" translatable="false">SMS</string>
+    <string name="settings_general">General</string>
+    <string name="settings_vibration" translatable="false">Vibration</string>
+    <string name="settings_vibration_on_title">Activated mode</string>
+    <string name="settings_vibration_off_title">Disabled mode</string>
+    <string name="settings_vibration_on_message">Duration while vibration are activated</string>
+    <string name="settings_vibration_off_message">Duration while vibration are disabled</string>
+    <string name="settings_sound">Sound</string>
+
+    <string name="permission_refused_title">Warning</string>
+    <string name="permission_refused_sms_message">Without this SMS Permission, WakeUpPhone cannot listen SMS alert</string>
+    <string name="permission_refused_vibrate_message">Without this Vibrate Permission, WakeUpPhone cannot activate vibration mode on your phone</string>
+    <string name="permission_refused_confirmed_button">I refuse permission</string>
+    <string name="permission_refused_granted_button">I accept permission</string>
+
+    <string name="alert_sound_value_default" translatable="false">DEFAULT_VALUE</string>
+    <string name="alert_sound_default">Phone Ringtone</string>
+    <string name="settings_vibrate_permission">Can use vibrator</string>
+
+    <string-array name="alert_sound">
+        <item>@string/alert_sound_default</item>
+    </string-array>
+    <string-array name="alert_sound_value">
+        <item>@string/alert_sound_value_default</item>
+    </string-array>
+</resources>
