@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
@@ -42,8 +41,6 @@ public class TriggerActivity extends AppCompatActivity implements View.OnClickLi
 
         if (!"".equals(trigger))
             mSharedPreferences.edit().putString(DataManager.TRIGGER_KEY, trigger).commit();
-
-        DataManager.getTrigger(this);
     }
 
     private void nextActivity()

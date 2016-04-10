@@ -5,7 +5,6 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
-import android.util.Log;
 
 import fr.thomaslesciellour.wakeupphone.BuildConfig;
 import fr.thomaslesciellour.wakeupphone.R;
@@ -33,8 +32,6 @@ public class DataManager {
         if (trigger.length() == 0)
             return defaultSmsTrigger;
 
-        Log.i("DataManager", trigger);
-
         return trigger;
     }
 
@@ -49,7 +46,6 @@ public class DataManager {
         }
         strPackage = buffer.substring(0, buffer.length()-1);
 
-        Log.i("DataManager", strPackage);
         return strPackage;
     }
 
