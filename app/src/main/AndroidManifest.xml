@@ -5,10 +5,18 @@
     <!-- SMS Alert -->
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
+
     <!-- Vibrator -->
     <uses-permission android:name="android.permission.VIBRATE" />
 
-    <!-- End of SMS Alert -->
+    <!-- GCM Permission -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <permission
+        android:name="fr.thomaslesciellour.wakeupphone.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="fr.thomaslesciellour.wakeupphone.permission.C2D_MESSAGE" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -34,10 +42,10 @@
 
         <activity android:name=".activity.SettingsActivity"
             android:theme="@style/AppTheme.NoWindowBackground" />
-        <!-- End of Activity -->
+        <!-- Activity (end) -->
 
 
-        <!-- Receiver -->
+        <!-- SMS Receiver -->
         <receiver
             android:name=".receiver.SMSReceiver"
             android:enabled="true"
@@ -46,7 +54,30 @@
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
-        <!-- End of Receiver -->
+        <!-- SMS Receiver (end) -->
+
+
+        <!-- GCM Receiver -->
+        <service
+            android:name="fr.thomaslesciellour.wakeupphone.service.MyGcmListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="fr.thomaslesciellour.wakeupphone.service.MyInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="fr.thomaslesciellour.wakeupphone.service.RegistrationIntentService"
+            android:exported="false" />
+        <!-- GCM Receiver (end) -->
 
     </application>
 

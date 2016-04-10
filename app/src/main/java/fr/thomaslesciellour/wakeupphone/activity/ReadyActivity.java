@@ -11,6 +11,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 
 import fr.thomaslesciellour.wakeupphone.R;
+import fr.thomaslesciellour.wakeupphone.service.RegistrationIntentService;
 
 public class ReadyActivity extends AppCompatActivity {
 
@@ -23,6 +24,8 @@ public class ReadyActivity extends AppCompatActivity {
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.breathe_animation);
 
         ll.startAnimation(animation);
+
+        startService(new Intent(this, RegistrationIntentService.class));
     }
 
     @Override
