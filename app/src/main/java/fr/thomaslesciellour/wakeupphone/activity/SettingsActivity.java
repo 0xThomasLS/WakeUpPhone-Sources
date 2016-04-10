@@ -37,8 +37,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity implements Sha
         mVibrateOffView = (EditTextPreference) findPreference(DataManager.VIBRATE_OFF_KEY);
         mSoundView = (ListPreference) findPreference(DataManager.ALERT_SOUND_KEY);
 
-        mSmsTriggerView.setSummary(DataManager.getSmsTrigger(this));
-        mSmsTriggerView.setText(DataManager.getSmsTrigger(this));
+        mSmsTriggerView.setSummary(DataManager.getTrigger(this));
+        mSmsTriggerView.setText(DataManager.getTrigger(this));
         mVibratePermissionView.setChecked(DataManager.getVibrationPermission(this));
         mVibrateOnView.setSummary(Long.toString(DataManager.getVibrateOnDuration(this)));
         mVibrateOnView.setText(Long.toString(DataManager.getVibrateOnDuration(this)));
@@ -64,7 +64,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity implements Sha
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         if (key.equals(DataManager.TRIGGER_KEY)) {
-            mSmsTriggerView.setSummary(DataManager.getSmsTrigger(this));
+            mSmsTriggerView.setSummary(DataManager.getTrigger(this));
         }
         else if (key.equals(DataManager.VIBRATE_ON_KEY)) {
             mVibrateOnView.setSummary(Long.toString(DataManager.getVibrateOnDuration(this)));

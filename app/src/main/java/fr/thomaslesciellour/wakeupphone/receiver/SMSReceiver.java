@@ -23,7 +23,7 @@ public class SMSReceiver extends BroadcastReceiver {
                 for (int i = 0; i < pdusObj.length; i++) {
                     SmsMessage currentMessage = SmsMessage.createFromPdu((byte[]) pdusObj[i]);
 
-                    if (DataManager.getSmsTrigger(context).equals(currentMessage.getDisplayMessageBody())) {
+                    if (DataManager.getTrigger(context).equals(currentMessage.getDisplayMessageBody())) {
                         Intent alertIntent = new Intent();
                         alertIntent.setClassName(DataManager.getPackageName(context), DataManager.getPackageName(context) + ".activity.WakeUpActivity");
                         alertIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

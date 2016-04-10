@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
+import android.util.Log;
 
 import fr.thomaslesciellour.wakeupphone.BuildConfig;
 import fr.thomaslesciellour.wakeupphone.R;
@@ -23,21 +24,33 @@ public class DataManager {
     private final static String VIBRATE_ON_DURATION = "500";
     private final static String VIBRATE_OFF_DURATION = "1000";
 
-    public static String getSmsTrigger(Context context)
+    public static String getTrigger(Context context)
     {
         String defaultSmsTrigger = context.getString(R.string.default_trigger);
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        String smsTrigger = sharedPreferences.getString(TRIGGER_KEY, defaultSmsTrigger);
+        String trigger = sharedPreferences.getString(TRIGGER_KEY, defaultSmsTrigger);
 
-        if (smsTrigger.length() == 0)
+        if (trigger.length() == 0)
             return defaultSmsTrigger;
 
-        return smsTrigger;
+        Log.i("DataManager", trigger);
+
+        return trigger;
     }
 
     public static String getPackageName(Context context)
     {
-        return context.getPackageName();
+        String[] packageName = context.getPackageName().split("\\.");
+        StringBuffer buffer = new StringBuffer();
+        String strPackage;
+
+        for(int i=0; i<3; i++) {
+            buffer.append(packageName[i] + '.');
+        }
+        strPackage = buffer.substring(0, buffer.length()-1);
+
+        Log.i("DataManager", strPackage);
+        return strPackage;
     }
 
     public static int getVersion()

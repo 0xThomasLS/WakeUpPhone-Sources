@@ -62,7 +62,10 @@
                         android:layout_gravity="center_horizontal"
                         android:hint="@string/default_trigger"
                         android:gravity="center_horizontal"
-                        android:singleLine="true" />
+                        android:singleLine="true"
+                        android:inputType="textCapSentences"
+                        android:lines="1"
+                        android:maxLines="1" />
 
                 </LinearLayout>
 
